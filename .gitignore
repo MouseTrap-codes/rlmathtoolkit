@@ -1,11 +1,9 @@
-
-# Byte-compiled files
+# Byte-compiled Python files
 __pycache__/
 *.py[cod]
 
-# Generated plots
-reports/figures/
+# Pytest cache
+.pytest_cache/
 
-__pycache__/
-*.py[cod]
+# Generated plots or figures
 reports/figures/
