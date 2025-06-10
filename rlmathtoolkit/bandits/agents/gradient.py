@@ -1,7 +1,7 @@
 import numpy as np
-from bandits.agents.base import Agent
-from bandits.policies import softmax_sample, softmax
-from bandits.updates import gradient_pref_update
+from rlmathtoolkit.bandits.agents.base import Agent
+from rlmathtoolkit.bandits.policies import softmax_sample, softmax
+from rlmathtoolkit.bandits.updates import gradient_pref_update
 
 
 class GradientBanditAgent(Agent):

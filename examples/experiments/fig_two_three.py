@@ -1,5 +1,5 @@
-from bandits.agents import EpsilonGreedyAgent, UCBAgent
-from bandits.envs import NArmedTestbed
+from rlmathtoolkit.bandits.agents import EpsilonGreedyAgent, UCBAgent
+from rlmathtoolkit.bandits.envs import NArmedTestbed
 import numpy as np
 import matplotlib.pyplot as plt
 

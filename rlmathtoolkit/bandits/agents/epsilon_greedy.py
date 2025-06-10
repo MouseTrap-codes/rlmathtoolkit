@@ -1,7 +1,7 @@
 import numpy as np
-from bandits.agents.base import Agent
-from bandits.policies import e_greedy
-from bandits.updates import sample_average_method, exponential_recency_weighted_average_method
+from rlmathtoolkit.bandits.agents.base import Agent
+from rlmathtoolkit.bandits.policies import e_greedy
+from rlmathtoolkit.bandits.updates import sample_average_method, exponential_recency_weighted_average_method
 
 
 class EpsilonGreedyAgent(Agent):
