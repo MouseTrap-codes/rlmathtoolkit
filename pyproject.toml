@@ -1,0 +1,38 @@
+[project]
+name = "rlmathtoolkit"
+version = "0.1.0"
+description = "A math-faithful Python toolkit implementing reinforcement learning algorithms chapter-by-chapter from Sutton & Barto."
+authors = [
+  { name = "Pranav Battini", email = "mousetrapcodes@.com" }
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.23",
+  "matplotlib>=3.6"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "pytest-cov>=4.1",
+  "ruff>=0.4.4",
+  "mypy>=1.10.0"
+]
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rlmathtoolkit*"]
+
+[tool.pytest.ini_options]
+addopts = "--tb=short --strict-markers"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
