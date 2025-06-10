@@ -3,7 +3,7 @@ name = "rlmathtoolkit"
 version = "0.1.0"
 description = "A math-faithful Python toolkit implementing reinforcement learning algorithms chapter-by-chapter from Sutton & Barto."
 authors = [
-  { name = "Pranav Battini", email = "mousetrapcodes@.com" }
+  { name = "Pranav Battini", email = "mousetrapcodes@gmail.com" }
 ]
 readme = "README.md"
 license = {text = "MIT"}
