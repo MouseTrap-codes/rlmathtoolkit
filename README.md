@@ -19,7 +19,7 @@ cd rlmathtoolkit
 To reproduce the figures from Sutton & Barto (Chapter 2), run:
 
 ```bash
-python -m experiments.experiments_02_bandits/fig_two_one.py
+python -m experiments.experiments_02_bandits/fig_two_one
 ```
 ## Usage Example
 
