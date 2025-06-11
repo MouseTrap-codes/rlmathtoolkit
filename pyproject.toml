@@ -1,33 +1,28 @@
-[project]
+[tool.poetry]
 name = "rlmathtoolkit"
 version = "0.1.0"
 description = "A math-faithful Python toolkit implementing reinforcement learning algorithms chapter-by-chapter from Sutton & Barto."
-authors = [
-  { name = "Pranav Battini", email = "mousetrapcodes@gmail.com" }
-]
+authors = ["Pranav Battini <mousetrapcodes@gmail.com>"]
 readme = "README.md"
-license = {text = "MIT"}
-requires-python = ">=3.9"
-dependencies = [
-  "numpy>=1.23",
-  "matplotlib>=3.6"
-]
+license = "MIT"
+packages = [{ include = "rlmathtoolkit" }]
+keywords = ["reinforcement-learning", "sutton-barto", "bandits", "educational", "rl"]
 
-[project.optional-dependencies]
-dev = [
-  "pytest>=7.4",
-  "pytest-cov>=4.1",
-  "ruff>=0.4.4",
-  "mypy>=1.10.0"
-]
+[tool.poetry.dependencies]
+python = ">=3.9"
+numpy = ">=1.23"
+matplotlib = ">=3.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.4"
+pytest-cov = ">=4.1"
+ruff = ">=0.4.4"
+mypy = ">=1.10.0"
+jupyter = "*"
 
 [build-system]
-requires = ["setuptools>=61", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["rlmathtoolkit*"]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 addopts = "--tb=short --strict-markers"

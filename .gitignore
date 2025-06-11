@@ -7,3 +7,4 @@ __pycache__/
 
 # Generated plots or figures
 reports/figures/
+.venv/
