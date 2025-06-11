@@ -1,14 +1,24 @@
 # RLMathToolkit
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-RLMathToolkit is a minimal, math-faithful Python library that implements core reinforcement learning algorithms chapter-by-chapter, following Sutton & Barto's *Reinforcement Learning (2nd Edition)*.
 
-## Running Experiments
+RLMathToolkit is a minimal, math-faithful Python library that implements core reinforcement learning algorithms chapter-by-chapter, following [Sutton & Barto's *Reinforcement Learning (2nd Edition)*](http://incompleteideas.net/book/the-book-2nd.html).
 
-To reproduce the figures from Sutton & Barto (Chapter 2), clone the repo and run any of the experiment scripts:
+## Installation
+
+You can install rlmathtoolkit by cloning the repository:
 
 ```bash
 git clone https://github.com/MouseTrap-codes/rlmathtoolkit.git
 cd rlmathtoolkit
+```
+
+## Running Experiments
+
+To reproduce the figures from Sutton & Barto (Chapter 2), run:
+
+```bash
 python -m experiments.experiments_02_bandits/fig_two_one.py
 ```
 ## Usage Example
@@ -38,6 +48,23 @@ for _ in range(steps):
 # Analyze
 print(f"Average reward after {steps} steps: {np.mean(rewards):.3f}")
 ```
+## 🛣️ Roadmap
+
+RLMathToolkit currently focuses on core ideas from **Chapter 2 (Multi-Armed Bandits)** of Sutton & Barto. Implementations of future chapters—including value prediction, dynamic programming, Monte Carlo methods, and temporal-difference learning—are planned and will be added incrementally.
+
+Planned additions:
+
+- Chapter 3: Finite Markov Decision Processes (MDPs)
+- Chapter 4: Dynamic Programming
+- Chapter 5: Monte Carlo Methods
+- Chapter 6: Temporal-Difference Learning
+- ... and more
+
+Stay tuned for updates!
+
+## 📄 License
+
+MIT
 
 
 
