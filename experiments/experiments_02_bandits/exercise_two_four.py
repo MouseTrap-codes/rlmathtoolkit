@@ -14,7 +14,7 @@ like Figure 2.1 for an action-value method using sample averages, incrementally 
 
 # setup
 num_runs = 2000
-num_steps = 2000
+num_steps = 10000
 n = 10
 
 # accumulators
