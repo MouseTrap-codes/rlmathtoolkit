@@ -5,6 +5,5 @@ __pycache__/
 # Pytest cache
 .pytest_cache/
 
-# Generated plots or figures
-reports/figures/
+# venv
 .venv/
