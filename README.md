@@ -33,8 +33,8 @@ deactivate
 
 ## Running Experiments
 
-To reproduce the figures from Sutton & Barto (Chapter 2), run:
-
+To reproduce a specific figure from Sutton & Barto, run the corresponding script in the rlmathtoolkit/bandits/experiments/ folder.
+For example, to generate Figure 2.1:
 ```bash
 python rlmathtoolkit/bandits/experiments/fig_two_one.py
 ```
