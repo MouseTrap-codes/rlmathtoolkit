@@ -1,2 +1,3 @@
 from .n_armed_testbed import NArmedTestbed
-__all__ = ["NArmedTestbed"]
+from .nonstationary_testbed import NonstationaryTestbed
+__all__ = ["NArmedTestbed", "NonstationaryTestbed"]
