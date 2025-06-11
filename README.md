@@ -7,7 +7,7 @@ RLMathToolkit is a minimal, math-faithful Python library that implements core re
 
 ## Installation
 
-You can install rlmathtoolkit by cloning the repository:
+You can get started by cloning the repository and installing the package locally:
 
 ```bash
 # Clone the repo
@@ -36,7 +36,7 @@ deactivate
 To reproduce the figures from Sutton & Barto (Chapter 2), run:
 
 ```bash
-python -m experiments.experiments_02_bandits.fig_two_one
+python rlmathtoolkit/bandits/experiments/fig_two_one.py
 ```
 ## Usage Example
 
