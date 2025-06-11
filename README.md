@@ -10,10 +10,27 @@ RLMathToolkit is a minimal, math-faithful Python library that implements core re
 You can install rlmathtoolkit by cloning the repository:
 
 ```bash
+```bash
+# Clone the repo
 git clone https://github.com/MouseTrap-codes/rlmathtoolkit.git
 cd rlmathtoolkit
+
+# (Optional but recommended) Create a virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install the package
 pip install .
 ```
+
+### 🔚 Exiting the virtual environment
+
+When you're done using the toolkit, you can deactivate the virtual environment:
+
+```bash
+deactivate
+```
+
 
 ## Running Experiments
 
