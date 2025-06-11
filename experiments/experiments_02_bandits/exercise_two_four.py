@@ -23,7 +23,6 @@ avg_rewards_weighted_avg = np.zeros(num_steps)
 optimal_action_sample_avg = np.zeros(num_steps)
 optimal_action_weighted_avg = np.zeros(num_steps)
 
-
 for run in range (num_runs):
     testbed = NonstationaryTestbed(n=n)
     agents = [
