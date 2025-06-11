@@ -10,7 +10,6 @@ RLMathToolkit is a minimal, math-faithful Python library that implements core re
 You can install rlmathtoolkit by cloning the repository:
 
 ```bash
-```bash
 # Clone the repo
 git clone https://github.com/MouseTrap-codes/rlmathtoolkit.git
 cd rlmathtoolkit
