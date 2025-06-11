@@ -2,6 +2,16 @@
 
 RLMathToolkit is a minimal, math-faithful Python library that implements core reinforcement learning algorithms chapter-by-chapter, following Sutton & Barto's *Reinforcement Learning (2nd Edition)*.
 
+## Running Experiments
+
+To reproduce the figures from Sutton & Barto (Chapter 2), clone the repo and run any of the experiment scripts:
+
+```bash
+git clone https://github.com/MouseTrap-codes/rlmathtoolkit.git
+cd rlmathtoolkit
+python -m experiments.experiments_02_bandits/fig_two_one.py
+```
+## Usage Example
 
 Simulate a basic ε-greedy agent on a 10-armed bandit testbed:
 
@@ -27,6 +37,7 @@ for _ in range(steps):
 
 # Analyze
 print(f"Average reward after {steps} steps: {np.mean(rewards):.3f}")
-'''
+```
+
 
 
