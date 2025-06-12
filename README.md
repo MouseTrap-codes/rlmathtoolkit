@@ -37,7 +37,7 @@ To reproduce a specific figure from Sutton & Barto, run the corresponding script
 
 For example, to generate Figure 2.1:
 ```bash
-python rlmathtoolkit/experiments/experiments_02_bandits/fig_two_one.py
+python experiments/experiments_02_bandits/fig_two_one.py
 ```
 ## Usage Example
 
