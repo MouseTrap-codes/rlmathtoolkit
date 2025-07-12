@@ -1,0 +1,37 @@
+name: RLMathToolkit CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    # 1) Checkout code
+    - uses: actions/checkout@v4
+
+    # 2) Install the desired Python (adjust versions later)
+    - uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+        cache: "poetry"   # built-in caching keyed on poetry.lock
+
+    # 3) Install Poetry itself
+    - uses: snok/install-poetry@v1
+      with:
+        virtualenvs-in-project: true    # puts .venv in repo root
+        installer-parallel: true
+
+    # 4) Install third-party deps (skip your package for caching speed),
+    #    then install your package
+    - name: Install dependencies
+      run: |
+        poetry install --no-interaction --no-ansi --no-root
+        poetry install --no-interaction --no-ansi
+
+    # 5) Lint (optional; comment out if Ruff isn’t ready yet)
+    - name: Lint with Ruff
+      run: poetry run ruff rlmathtoolkit tests
+
+    # 6) Run tests + coverage
+    - name: Run unit tests
+      run: poetry run pytest -q --cov=rlmathtoolkit --cov-report=term-missing
