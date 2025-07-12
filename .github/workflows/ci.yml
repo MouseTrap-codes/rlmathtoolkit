@@ -7,31 +7,44 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1 — checkout sources
+    # 1 — Check out source code
     - uses: actions/checkout@v4
 
-    # 2 — Python + Poetry cache
+    # 2 — Install Python 3.11
     - uses: actions/setup-python@v4
       with:
         python-version: "3.11"
-        cache: "poetry"          # speeds up subsequent runs
 
-    # 3 — install Poetry
+    # 3 — Install Poetry
     - uses: snok/install-poetry@v1
       with:
-        virtualenvs-in-project: true
+        virtualenvs-in-project: true   # creates .venv in repo root
         installer-parallel: true
 
-    # 4 — install dependencies (deps first, then your package)
+    # 4 — Restore Poetry / pip / venv cache
+    - name: Restore cached virtual-env & wheels
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cache/pypoetry
+          ~/.cache/pip
+          .venv
+        key: ${{ runner.os }}-py311-poetry-${{ hashFiles('**/poetry.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-py311-poetry-
+
+    # 5 — Install dependencies
+    #     • First: third-party only  (for better cache hits)
+    #     • Second: your package itself
     - name: Install dependencies
       run: |
         poetry install --no-interaction --no-ansi --no-root
         poetry install --no-interaction --no-ansi
 
-    # 5 — lint
-    - name: Lint with Ruff
+    # 6 — Lint
+    - name: Ruff lint
       run: poetry run ruff check rlmathtoolkit tests
 
-    # 6 — tests + coverage
-    - name: Run unit tests
+    # 7 — Run tests
+    - name: Pytest + coverage
       run: poetry run pytest -q --cov=rlmathtoolkit --cov-report=term-missing
