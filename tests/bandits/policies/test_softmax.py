@@ -1,5 +1,5 @@
 import numpy as np
-from rlmathtoolkit.bandits.policies import softmax, softmax_sample
+from rlmathtoolkit.bandits.policies import softmax
 
 def test_softmax_normalization():
     h = [1.0, 2.0, 3.0]
